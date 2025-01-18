@@ -40,9 +40,9 @@ jobs:
         
       - name: Deploy to Contabo
         env:
-          CONTABO_HOST: ${{ secrets.CONTABO_HOST }}
-          CONTABO_USER: ${{ secrets.CONTABO_USERNAME }}
-          CONTABO_PASS: ${{ secrets.CONTABO_PASSWORD }}
+          CONTABO_HOST: 89.250.70.43
+          CONTABO_USER: root
+          CONTABO_PASS: Kyrgyzstanym01!
         run: |
           sshpass -p "$CONTABO_PASS" ssh -o StrictHostKeyChecking=no $CONTABO_USER@$CONTABO_HOST '
             # Pull the latest image
